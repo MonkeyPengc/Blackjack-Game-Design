@@ -22,20 +22,21 @@ A GameManager has a GameTable.
 
 ### Behaviors of Entities
 
-Dealer and Players play a CardDeck with their own strategies.
-
-A GameTable has only 1 Dealer and may have up to 5 Players.
+GameManager shuffles the CardDeck when the system starts, or when there are 60 cards left.
 
 GameManager runs a GameTable and decides the winner in each single play.
 
-One CardDeck contains 312 cards with 4 kinds of suit, 6 decks of standard 52-card pack are used.
-
-Ace is worth 1 or 11. Face card are 10, and any other card is its pip value.
+Dealer and Players play a CardDeck with their own strategies.
 
 ### Other Assumptions
+
+A GameTable has only 1 Dealer and may have up to 5 Players.
 
 At least 1 Dealer and 1 Player joins the GameTable in order to start the game.
 
 Each participant places a bet in chips limited from $2 to $500.
 
-GameManager reshuffles the CardDeck when the system starts, or when there are 60 cards left.
+One CardDeck contains 312 cards with 4 kinds of suit, 6 decks of standard 52-card pack are used.
+
+Ace is worth 1 or 11. Face card are 10, and any other card is its pip value.
+
