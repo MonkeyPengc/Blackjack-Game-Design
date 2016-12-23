@@ -239,7 +239,7 @@ if __name__ == "__main__":
         try:
             chips_for_players = int(input("Enter an initial amount of chips for each player(>=$5): "))
 
-        except:
+        except (SyntaxError, ValueError, NameError):
             print("Oops! That was an invalid answer. Try again...")
 
         else:
