@@ -2,6 +2,10 @@
 
 Rules based on: http://www.bicyclecards.com/how-to-play/blackjack/
 
+# How to Play
+
+Please run client code (blackjack.py) through command line, and follow the instructions. 
+
 # Design Concepts
 
 ### Three Entities(Sub Entities)
