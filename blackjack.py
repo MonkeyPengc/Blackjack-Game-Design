@@ -7,7 +7,7 @@ from carddeck import CardDeck
 
 
 class BlackjackManager:
-    def __init__(self, num_players=5, chips_for_players=500):
+    def __init__(self, num_players, chips_for_players):
         self.game_table = GameTable(num_players, chips_for_players)
         self.game_status = False
     
