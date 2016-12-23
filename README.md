@@ -22,21 +22,25 @@ A Dealer/Player is a Gamer.
 
 A CardDeck has a specified amount of Cards.
 
+A GameTable has one Dealer, Multiple Players and a CardDeck.
+
 A BlackjackManager has a GameTable.
 
 ### Behaviors of Entities
 
-BlackjackManager shuffles the CardDeck when the system starts, or when there are 60 cards left.
+BlackjackManager runs a GameTable, decides the winner in each single play, and terminates when there are no Players.
 
-BlackjackManager runs a GameTable, and decides the winner in each single play.
+BlackjackManager shuffles the CardDeck when the system starts, or when there are 60 cards left.
 
 GameTable joins or leaves Gamers.
 
-One Dealer and multiple Players play a CardDeck with their own strategies.
+The Dealer and multiple Players play a CardDeck with their own strategies.
 
-Dealer serves and deals with Players.
+The Dealer serves and deals with Players.
 
 Players place bet, and make decisions in each single play.
+
+Players choose to leave the GameTable, or forced to leave once below a certain amount of chips.
 
 
 
