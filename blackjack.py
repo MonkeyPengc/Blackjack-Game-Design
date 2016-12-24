@@ -126,25 +126,34 @@ class BlackjackManager:
                 self.game_table.dealer.Deal(p)
         
             ## if player stands at 21 or less, the dealer asks the player hit or stand
-            else:
-                hit = self.game_table.dealer.HitOrStand(p)
-                
-                while hit:
-                    p.WantCard(self.game_table.deck)
-                    player_score = p.CalculateScore()
-                    print("Player {0}, Cards {1}.".format(p.id, p.ShowHand()))
-                    if p.IsBust(player_score):
-                        break
-                
+            while True:
+                try:
                     hit = self.game_table.dealer.HitOrStand(p)
                 
-                ## if the player goes bust, he loses the bet.
-                if p.IsBust(player_score):
-                    self.game_table.dealer.Deal(p)
-                
-                ## if the player stands at 21 or less, the dealer continues to serve the next player
+                except (SyntaxError, ValueError, NameError):
+                    print("Oops! That was an invalid answer. Try again...")
+                    
                 else:
-                    print("Done! Player {0} stands at {1} score {2}.".format(p.id, p.ShowHand(), player_score))
+                    if hit:
+                        p.WantCard(self.game_table.deck)
+                        player_score = p.CalculateScore()
+                        print("Player {0}, Cards {1}.".format(p.id, p.ShowHand()))
+                        
+                        if p.IsBust(player_score):
+                            break
+                        
+                        continue
+                
+                    else:
+                        break
+                
+            ## if the player goes bust, he loses the bet.
+            if p.IsBust(player_score):
+                self.game_table.dealer.Deal(p)
+                
+            ## if the player stands at 21 or less, the dealer continues to serve the next player
+            else:
+                print("Done! Player {0} stands at {1} score {2}.".format(p.id, p.ShowHand(), player_score))
 
     def DecideWinner(self):
         dealer_score = self.game_table.dealer.CalculateScore()
