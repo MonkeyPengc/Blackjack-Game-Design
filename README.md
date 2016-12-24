@@ -30,7 +30,7 @@ A BlackjackManager has a GameTable.
 
 BlackjackManager runs a GameTable, decides the winner in each single play, and terminates when there are no Players.
 
-BlackjackManager shuffles the CardDeck when the system starts, or when there are 60 cards left.
+BlackjackManager shuffles the CardDeck when the system starts, or when there are less than 60 cards left.
 
 GameTable joins or leaves Gamers.
 
