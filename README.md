@@ -12,6 +12,8 @@ Please run client code (blackjack.py) through command line, and follow the instr
 
 Gamer(Dealer, Player)
 
+Card
+
 CardDeck
 
 GameTable
