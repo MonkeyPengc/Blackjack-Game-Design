@@ -8,11 +8,13 @@ Please run client code (blackjack.py) through command line, and follow the instr
 
 # Design Concepts
 
-### Three Entities(Sub Entities)
+### Main Entities(Sub Entities)
 
 Gamer(Dealer, Player)
 
-CardDeck(Blackjack Card)
+CardDeck
+
+GameTable
 
 BlackjackManager
 
