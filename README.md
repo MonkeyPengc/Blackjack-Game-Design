@@ -14,7 +14,7 @@ Gamer(Dealer, Player)
 
 CardDeck(Blackjack Card)
 
-BlackjackManager(GameTable)
+BlackjackManager
 
 ### Relation between Entities
 
